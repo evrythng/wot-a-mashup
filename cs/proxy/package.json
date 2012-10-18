@@ -1,0 +1,24 @@
+{
+  "name": "click-proxy",
+  "version": "0.0.1",
+  "description": "A simple proxy for clickscript.",
+  "main": "proxy.js",
+  "dependencies": {
+    "http-proxy": "~0.8.2",
+    "dtrace-provider": "~0.0.9"
+  },
+  "devDependencies": {},
+  "bundleDependencies": ["http-proxy", "dtrace-provider"],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/webofthings/ClickScript.git"
+  },
+  "keywords": [
+    "reverse-proxy"
+  ],
+  "author": "Dominique Guinard <dom@evrythng.com>",
+  "license": "GPL"
+}

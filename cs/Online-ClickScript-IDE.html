@@ -13,6 +13,7 @@
 		
 		<!-- CSS ClickScript -->
 		<link rel="stylesheet" type="text/css" media="all" href="util/css/csIde.css" />
+		<link rel="stylesheet" type="text/css" media="all" href="util/css/evrythng.css" />
 	
 		<!-- LOAD DOJO FROM LOCAL LIB - for debugging purpose!-->
 		<script type="text/javascript">
@@ -205,9 +206,11 @@
 	<body class="cs claro" >
 	    <div id="loading" style="position:absolute;left:0px;top:0px;width:100%;height:100%;background-color:white;z-index:999;">
 		<div id="innerLoading" class="shadow">
-			<img src="util/images/logoXx64.png" />
-			<h1>ClickScript is loading...</h1>
-			<div id="loadingbar"><img src="util/images/loadingbar.gif"/></div>
+			<img src="./util/images/evrythng/logo.png"/>
+			<div id="loadingbar">
+				<progress max="100"></progress>
+				<h3>Loading...</h3>
+			</div>
 		</div>
 		
 	    </div>
@@ -343,7 +346,9 @@
 				<input id="blur-widget"  dojoType="dijit.form.CheckBox" style="width:1px;height:1px">
 				<!-- END DO NOT REMOVE!-->
 				
-				<span class="clickScriptTitle"></span>
+				<div class="clickScriptTitle">
+					<span class="powered-by">powered by <a href="http://clickscript.ch/">ClickScript</a></span>
+				</div>
 
 		   </div>
 	        <!-- END RIGHT-COL -->

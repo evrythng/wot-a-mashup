@@ -1,0 +1,28 @@
+/*
+	CSS rules EVRYTHNG skin
+*/
+
+.cs.claro .dijitmenubar {
+	background-color: #404040;
+}
+
+#csInfo {
+	z-index: 1;
+	background: #fff;
+}
+
+.clickscripttitle {
+	z-index: -20;
+	width: 100%;
+	min-height: 20px;
+	padding: 90px 0 0 0;
+	background: url('../images/evrythng/logo.png') no-repeat top center;
+	text-align: center;
+}
+.powered-by a {
+	color: inherit;
+	text-decoration: none;
+}
+.powered-by a:hover {
+	text-decoration: underline;
+}

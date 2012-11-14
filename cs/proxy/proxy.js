@@ -8,7 +8,8 @@ fs = require('fs');
 twitter = require('ntwitter');
 
 var i = 0;
-var query = "evrythng";
+//var query = "evrythng";
+var query = "#wired2012";
 
 var twit = new twitter({
 	consumer_key: '1DkLp0NFat8oOLxgG5RQ',
@@ -20,7 +21,9 @@ var twit = new twitter({
 /*
  * Uses the Twitter streaming API to get the number of tweets about EVRYTHNG
  */
-twit.stream('statuses/filter', {"track":query}, function(stream) {
+twit.stream('statuses/filter', {
+	"track":query
+}, function(stream) {
 	stream.on('data', function (data) {
 		i++;
 		console.log(data);
@@ -32,16 +35,29 @@ twit.stream('statuses/filter', {"track":query}, function(stream) {
 // Create a proxy server with custom application logic
 //
 httpProxy.createServer(function (req, res, proxy) {
-	//
-	// Put your custom server logic here
-	//
 	if (req.url.indexOf("/tweets") !== -1) {
 		res.writeHead(200);
-			res.end(JSON.stringify({"numberOfTweets" : i}));
+		res.end(JSON.stringify({
+			"numberOfTweets" : i
+		}));
 	}
 	
-	if(req.url.indexOf("/thngs") == -1) {
-		//serve static content
+	else if (req.url.indexOf("/RestfulCamService/webcam/snapshot") !== -1) {
+		proxy.proxyRequest(req, res, {
+			host: 'localhost',
+			port: 8080
+		});
+	}
+	
+	else if(req.url.indexOf("/thngs") !== -1) {
+		proxy.proxyRequest(req, res, {
+			host: 'api.evrythng.com',
+			port: 80
+		});
+	}
+	
+	//serve static content
+	else {
 		fs.readFile("../" + req.url, function (err,data) {
 			if (err) {
 				res.writeHead(404);
@@ -52,19 +68,6 @@ httpProxy.createServer(function (req, res, proxy) {
 			res.end(data);
 		});
 	}
-	else {
-		//Prod proxy request to API
-		proxy.proxyRequest(req, res, {
-			host: 'api.evrythng.com',
-			port: 80
-		});
-		
-	//		//Local proxy request to API
-	//		proxy.proxyRequest(req, res, {
-	//			host: 'localhost',
-	//			port: 8005
-	//		});
-	}
-  
+
   
 }).listen(8001);

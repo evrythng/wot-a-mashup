@@ -40,6 +40,8 @@
 	 * Set global configs
 	 */ 
 	cs.config = {
+		// EVRYTHNG settings
+		evrythng : {key : "", thng : ""},
 		
 		// Version
 		version : "0.5 BETA",

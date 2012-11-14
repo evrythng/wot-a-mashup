@@ -47,6 +47,8 @@ cs.componentContainer.push({
 });
 
 
+
+
 cs.componentContainer.push({
 	name : "cs.string.match",
 	description : "HAS SUBSTRING is true if SEARCH occures in TEXT",
@@ -138,3 +140,28 @@ cs.componentContainer.push({
 			state.outputs.item(0).setValue(out);
 		}
 });
+
+cs.componentContainer.push({
+		name : "cs.string.is_equal",
+		description : "RESULT is True if String1 and String2 are the same",
+		inputs : 
+			[{
+				name: "String1",
+				type: cs.library.getType("cs.type.String")
+			},
+			{
+				name: "String2",
+				type: cs.library.getType("cs.type.String")
+			}],
+		outputs:  
+			[{
+				name: "RESULT",
+				type: "cs.type.Boolean"
+			}],
+		image: "math/equal.png",
+		exec : function(state){			
+			var string1 = state.inputs.item(0).getValue();
+			var string2 = state.inputs.item(1).getValue();
+			state.outputs.item(0).setValue((string1 == string2));
+		}
+	});

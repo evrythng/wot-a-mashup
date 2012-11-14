@@ -151,7 +151,7 @@ var alert = {};
 			/**
 			 * Init userselect
 			 */
-			var menu = new dijit.Menu({
+			/* var menu = new dijit.Menu({
 				style: "display: none;"
 			});
 			
@@ -175,7 +175,7 @@ var alert = {};
 				id: "dropdown-change-user"
 			});
 			dojo.byId("select-user").appendChild(button.domNode);
-
+			*/
 			
 			cs.console.write("ClickScript IDE loaded.");
 		},
@@ -405,6 +405,15 @@ var alert = {};
 		 */
 		changeUser : function(username,token){
 			cs.global.persistanceManager.setUser(username,token);
+			dijit.byId('dialog-configuration').hide();
+		},
+
+		/**
+		 * change EVRYTHNG API settings
+		 */
+		changeEvrythngSettings : function(apiKey,thngId){
+			cs.config.evrythng.key = apiKey;
+			cs.config.evrythng.thng = thngId;
 			dijit.byId('dialog-configuration').hide();
 		},
 		

@@ -1,7 +1,6 @@
 dojo.provide("cs.lib.evrythng.services.init");
 
 var proxyUrl = "http://localhost:8001";
-var apiKeyGlobal = "hep12ZDr4cKXkEeR9Vs1NwYYl1w4vj31tyVSCXbEXVzyJ1Cjng0KLshcJNc88bUaHCTv6iQvgjyNJc4g";
 var coffeeMachineId = "50812fcfe4b0a4cecca9b847" // "507e77ace4b0cc3d15e38212"; // Local
 var coffeeMachineUrl = proxyUrl + "/thngs/" + coffeeMachineId;
 
@@ -10,6 +9,8 @@ var checkinUrl = proxyUrl + "/thngs/" + checkinId;
 
 var spotId = "50812b69e4b0a4cecca9b843";
 var spotUrl = proxyUrl + "/thngs/" + spotId;
+
+var webcamUrl = proxyUrl + "/RestfulCamService/webcam/snapshot";
 
 var evrythngMessage = "EVRYTHNG -- ";
 
@@ -36,13 +37,13 @@ cs.componentContainer.push({
 	image: "evrythng/evrythng-square.png",
 	exec : function(state){
 		var propertyName = state.inputs.item(0).getValue();
-		var endPointUrl = coffeeMachineUrl + "/properties/" + propertyName + "?access_token=" + apiKeyGlobal;
+		var endPointUrl = coffeeMachineUrl + "/properties/" + propertyName + "?access_token=" + cs.config.evrythng.key;
 		this.setAsync();
 		var compo = this;
 		$.ajax({
 			beforeSend: function(xhrObj){
 				xhrObj.setRequestHeader("Accept","application/javascript");
-				xhrObj.setRequestHeader("Authorization", apiKeyGlobal);
+				xhrObj.setRequestHeader("Authorization", cs.config.evrythng.key);
 			},
 			url: endPointUrl,
 			type: "GET",
@@ -93,7 +94,7 @@ cs.componentContainer.push({
 		var compo = this;
 		
 		var propertyName = state.inputs.item(0).getValue();
-		var endPointUrl = coffeeMachineUrl + "/properties/" + propertyName + "?access_token=" + apiKeyGlobal;
+		var endPointUrl = coffeeMachineUrl + "/properties/" + propertyName + "?access_token=" + cs.config.evrythng.key;
 		var payload = [{
 			"value" : state.inputs.item(1).getValue()
 		}];
@@ -103,7 +104,7 @@ cs.componentContainer.push({
 			beforeSend: function(xhrObj){
 				xhrObj.setRequestHeader("Content-Type","application/json");
 				xhrObj.setRequestHeader("Accept","application/json");
-				xhrObj.setRequestHeader("Authorization", apiKeyGlobal);
+				xhrObj.setRequestHeader("Authorization", cs.config.evrythng.key);
 			},
 			url: endPointUrl,
 			type: "PUT",
@@ -132,10 +133,6 @@ cs.componentContainer.push({
 	description : "Get the number of tweets for EVRYTHNG",
 	inputs :
 	[
-	{
-		name: "Keyword to look for",
-		type: "cs.type.String"
-	}
 	],
 	outputs:
 	[
@@ -146,9 +143,7 @@ cs.componentContainer.push({
 	],
 	image: "evrythng/twitter.png",
 	exec : function(state){
-		var propertyName = state.inputs.item(0).getValue();
 		var endPointUrl = proxyUrl + "/tweets";
-		alert(endPointUrl);
 		this.setAsync();
 		var compo = this;
 		$.ajax({
@@ -199,7 +194,7 @@ cs.componentContainer.push({
 		this.setAsync();
 		var compo = this;
 		
-		var endPointUrl = coffeeMachineUrl + "/properties/cmd?access_token=" + apiKeyGlobal;
+		var endPointUrl = coffeeMachineUrl + "/properties/cmd?access_token=" + cs.config.evrythng.key;
 		var payload = [{
 			"value" : state.inputs.item(1).getValue()
 		}];
@@ -209,7 +204,7 @@ cs.componentContainer.push({
 			beforeSend: function(xhrObj){
 				xhrObj.setRequestHeader("Content-Type","application/json");
 				xhrObj.setRequestHeader("Accept","application/json");
-				xhrObj.setRequestHeader("Authorization", apiKeyGlobal);
+				xhrObj.setRequestHeader("Authorization", cs.config.evrythng.key);
 			},
 			url: endPointUrl,
 			type: "PUT",
@@ -256,7 +251,7 @@ cs.componentContainer.push({
 		var compo = this;
 		
 		var propertyName = state.inputs.item(0).getValue();
-		var endPointUrl = checkinUrl + "/properties/" + propertyName + "?access_token=" + apiKeyGlobal;
+		var endPointUrl = checkinUrl + "/properties/" + propertyName + "?access_token=" + cs.config.evrythng.key;
 		var payload = [{
 			"value" : "empty"
 		}];
@@ -266,7 +261,7 @@ cs.componentContainer.push({
 			beforeSend: function(xhrObj){
 				xhrObj.setRequestHeader("Content-Type","application/json");
 				xhrObj.setRequestHeader("Accept","application/json");
-				xhrObj.setRequestHeader("Authorization", apiKeyGlobal);
+				xhrObj.setRequestHeader("Authorization", cs.config.evrythng.key);
 			},
 			url: endPointUrl,
 			type: "PUT",
@@ -311,13 +306,13 @@ cs.componentContainer.push({
 	exec : function(state){
 		var propertyName = state.inputs.item(0).getValue();
 		
-		var endPointUrl = checkinUrl + "/properties/" + propertyName + "?access_token=" + apiKeyGlobal;
+		var endPointUrl = checkinUrl + "/properties/" + propertyName + "?access_token=" + cs.config.evrythng.key;
 		this.setAsync();
 		var compo = this;
 		$.ajax({
 			beforeSend: function(xhrObj){
 				xhrObj.setRequestHeader("Accept","application/javascript");
-				xhrObj.setRequestHeader("Authorization", apiKeyGlobal);
+				xhrObj.setRequestHeader("Authorization", cs.config.evrythng.key);
 			},
 			url: endPointUrl,
 			type: "GET",
@@ -361,13 +356,13 @@ cs.componentContainer.push({
 	exec : function(state){
 		var propertyName = state.inputs.item(0).getValue();
 		
-		var endPointUrl = spotUrl + "/properties/" + propertyName + "?access_token=" + apiKeyGlobal;
+		var endPointUrl = spotUrl + "/properties/" + propertyName + "?access_token=" + cs.config.evrythng.key;
 		this.setAsync();
 		var compo = this;
 		$.ajax({
 			beforeSend: function(xhrObj){
 				xhrObj.setRequestHeader("Accept","application/javascript");
-				xhrObj.setRequestHeader("Authorization", apiKeyGlobal);
+				xhrObj.setRequestHeader("Authorization", cs.config.evrythng.key);
 			},
 			url: endPointUrl,
 			type: "GET",
@@ -387,3 +382,57 @@ cs.componentContainer.push({
 	}
 });
 
+/**
+ * This takes a snapshot from the webcam
+ */
+cs.componentContainer.push({
+	name : "cs.evrythng.demo.webcam",
+	description : "Gets a picture from a Webcam and saves it to EVRYTHNG.",
+	inputs :
+	[
+	{
+		name: "Name of the picture",
+		type: "cs.type.String"
+	}
+	],
+	outputs:
+	[
+	{
+		name: "Image URL",
+		type: "cs.type.String"
+	}
+	],
+	image: "evrythng/webcam.png",
+	exec : function(state){
+		this.setAsync();
+		var compo = this;
+		
+		var endPointUrl = webcamUrl;
+		var payload = {
+			"fileName" : state.inputs.item(0).getValue()
+		};
+		payload = JSON.stringify(payload);
+
+		$.ajax({
+			beforeSend: function(xhrObj){
+				xhrObj.setRequestHeader("Content-Type","application/json");
+				xhrObj.setRequestHeader("Accept","application/json");
+			},
+			url: endPointUrl,
+			type: "PUT",
+			data: payload,
+			dataType: "json",
+			success: function(result){
+				state.outputs.item(0).setValue(result.snapshotUrl);
+				compo.finishAsync();
+			},
+			error: function(msg){
+				compo.finishAsync();
+				state.outputs.item(0).setValue("error");
+				console.log(evrythngMessage + "Error on: " + endPointUrl);
+				console.log(msg);
+				
+			}
+		});
+	}
+});

@@ -39,6 +39,8 @@ cs.componentContainer.push({
 		var propertyName = state.inputs.item(0).getValue();
 		var endPointUrl = coffeeMachineUrl + "/properties/" + propertyName + "?access_token=" + cs.config.evrythng.key;
 		this.setAsync();
+
+		alert(endPointUrl);
 		var compo = this;
 		$.ajax({
 			beforeSend: function(xhrObj){

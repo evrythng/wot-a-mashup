@@ -34,13 +34,6 @@
 		<!-- SETUP PAGE -->
         <script type="text/javascript">//<![CDATA[
 
-
-			/** EVRYTHNG API config (global variables) */
-
-			// // Add you API key below
-			var evrythngApiKey = "";
-			var thngId = "";
-
 				/**
 				 * TRY to Load as much as possible in the onload-function to activate the loading screen
 				 */
@@ -259,10 +252,10 @@ dojo.connect(cs.executionController.getWorklist(),"onStateChange",this,function(
 				<div dojoType="dijit.MenuItem" onClick="dijit.byId('dialog-configuration').show()" iconClass="csMenuConfig">
 					Configuration
 				</div>
-				<div dojoType="dijit.MenuItem" onClick="window.open('../cs/util/tutorial/tutorialEN.html','cs-window','status=1,width=900,height=600,scrollbars=1')" iconClass="csMenuTutorial">
+				<div dojoType="dijit.MenuItem" onClick="window.open('util/tutorial/tutorialEN.html','cs-window','status=1,width=900,height=600,scrollbars=1')" iconClass="csMenuTutorial">
 					Tutorial
 				</div>
-				<div dojoType="dijit.MenuItem" onClick="window.open('../cs/util/exercise/index.html','cs-window','status=1,width=900,height=600,scrollbars=1')" iconClass="csMenuExercise">
+				<div dojoType="dijit.MenuItem" onClick="window.open('util/exercise/index.html','cs-window','status=1,width=900,height=600,scrollbars=1')" iconClass="csMenuExercise">
 					Exercise
 				</div>
 			</div>
@@ -525,17 +518,17 @@ data-dojo-props="design: 'headline'">
 	<!-- 
 	  -- DIALOG: LOAD 
 	-->
-	<div dojoType="dijit.Dialog" id="dialog-load" title="Load ClickScript">
+	<!-- <div dojoType="dijit.Dialog" id="dialog-load" title="Load ClickScript">
 		<div class="load">
 			<div>Select Script to load...</div>
 			<div id="list-scripts"></div>
 		</div>			
-	</div>
+	</div> -->
 	
 	 <!-- 
 	  -- DIALOG: SAVE AS 
 	-->
-	<div dojoType="dijit.Dialog" id="dialog-save-as" title="Load ClickScript">
+	<!-- <div dojoType="dijit.Dialog" id="dialog-save-as" title="Load ClickScript">
 		<div class="load">
 			<div>Please enter a name to store the script</div>
 			<div class="form-line">
@@ -553,6 +546,6 @@ data-dojo-props="design: 'headline'">
 				</button> 
 			</div>
 		</div>			
-	</div>
+	</div> -->
 </body>
 </html>

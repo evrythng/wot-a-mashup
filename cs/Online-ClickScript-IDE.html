@@ -222,15 +222,15 @@ dojo.connect(cs.executionController.getWorklist(),"onStateChange",this,function(
 				<div dojoType="dijit.MenuItem" onClick="cs.global.ide.cleanAll();" iconClass="dijitEditorIcon dijitEditorIconNewPage">
 					New 
 				</div>
-				<div dojoType="dijit.MenuItem" onClick="cs.global.ide.showLoadDialog();" iconClass="dijitFolderOpened">
+				<!-- <div dojoType="dijit.MenuItem" onClick="cs.global.ide.showLoadDialog();" iconClass="dijitFolderOpened">
 					Load... 
-				</div>
-				<div dojoType="dijit.MenuItem" onClick="cs.global.ide.saveScript();" iconClass="dijitIconSave">
+				</div> -->
+				<!-- <div dojoType="dijit.MenuItem" onClick="cs.global.ide.saveScript();" iconClass="dijitIconSave">
 					Save
 				</div>
 				<div dojoType="dijit.MenuItem" onClick="dijit.byId('dialog-save-as').show();" iconClass="dijitIconSave">
 					Save As...
-				</div>
+				</div> -->
 				<div dojoType="dijit.MenuItem" iconClass="csMenuExport">
 					<script type="dojo/method" event="onClick" args="evt">
 					var exportDialog = dijit.byId('dialog-export');

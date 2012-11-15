@@ -40,8 +40,8 @@
 	 * Set global configs
 	 */ 
 	cs.config = {
-		// EVRYTHNG settings
-		evrythng : {key : "", thng : ""},
+		// EVRYTHNG settings, add your API key and thngId below:
+		evrythng : {key : "", thng : "", proxyUrl : "http://localhost:8001"},
 		
 		// Version
 		version : "0.5 BETA",

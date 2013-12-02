@@ -45,7 +45,7 @@ Add your EVRYTHNG API key and the id of the Thng you want to include in your mas
 
 Browse to: 
 
-    http://localhost:8001/Online-ClickScript-IDE.html 
+    http://localhost:8001/wot-a-mashup.html 
 
 The two EVRYTHNG modules are the last ones on the Clickscript IDE module bar! Enjoy!
 

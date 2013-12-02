@@ -4,8 +4,6 @@ This is a fork of the nice [ClickScript](http://clickscript.ch/) Javascript mash
 integrate direct support for the EVRYTHNG Web of Things API into Clickscript as a showcase of how EVRYTHNG makes it easy
 build Web of Things apps.
 
-It is real work in progress and you should rather consider cloning/forking the main [ClickScript](http://github.com/clickscript) project
-if you aren't interested in the EVRYTHNG integration.
 
 The forks adds:
 * 2 EVYTHNG modules, one for reading Thng properties, one for updating them.

@@ -1,7 +1,8 @@
-#Clickscript with EVRYTHNG support!
+#A Physical Mashup Tool with EVRYTHNG support!
 
-This is a fork of the nice [ClickScript](http://clickscript.ch/) Javascript mashup tool, the goal of this fork is to
-integrate direct support for the EVRYTHNG Web of Things API into Clickscript as a showcase of how EVRYTHNG makes it easy
+WoT-a-Mashup is a mashup tool for the Internet of Things and the Web of Things. It was the first tool of this kind and is built around the idea of [Physical Mashups](http://www.webofthings.org/2010/09/11/mashing-up-homes/).
+
+It is based on the great [ClickScript](http://clickscript.ch/) Javascript mashup tool, and integrates direct support for the EVRYTHNG Web of Things API into Clickscript as a showcase of how EVRYTHNG makes it easy
 build Web of Things apps.
 
 

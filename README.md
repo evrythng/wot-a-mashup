@@ -46,6 +46,10 @@ Add your EVRYTHNG API key and the id of the Thng you want to include in your mas
 Browse to: 
 
     http://localhost:8001/wot-a-mashup.html 
+    
+# Writing your own module
+
+You can create you own mashup modules (little boxes) by 
 
 The two EVRYTHNG modules are the last ones on the Clickscript IDE module bar! Enjoy!
 

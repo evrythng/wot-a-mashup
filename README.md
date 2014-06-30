@@ -1,4 +1,5 @@
-#A Physical Mashup Tool with EVRYTHNG support!
+#WoT-a-Mashup! 
+## A Physical Mashup Tool with EVRYTHNG support!
 
 WoT-a-Mashup is a mashup tool for the Internet of Things and the Web of Things. It was the first tool of this kind and is built around the idea of [Physical Mashups](http://www.webofthings.org/2010/09/11/mashing-up-homes/).
 
@@ -37,8 +38,6 @@ mashups/applications within seconds!
 Add your EVRYTHNG API key and the id of the Thng you want to include in your mashups:
 
     evrythng : {key : "YOUR-KEY", thng : "YOUR-THNG-ID", proxyUrl : "http://localhost:8001"}
-
-(Note that you can also set that "at run-time" by accessing the 
 
 # Get started
     cd proxy

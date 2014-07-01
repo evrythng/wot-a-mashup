@@ -1,4 +1,5 @@
-#A Physical Mashup Tool with EVRYTHNG support!
+#WoT-a-Mashup! 
+## A Physical Mashup Tool with EVRYTHNG support!
 
 WoT-a-Mashup is a mashup tool for the Internet of Things and the Web of Things. It was the first tool of this kind and is built around the idea of [Physical Mashups](http://www.webofthings.org/2010/09/11/mashing-up-homes/).
 
@@ -38,8 +39,6 @@ Add your EVRYTHNG API key and the id of the Thng you want to include in your mas
 
     evrythng : {key : "YOUR-KEY", thng : "YOUR-THNG-ID", proxyUrl : "http://localhost:8001"}
 
-(Note that you can also set that "at run-time" by accessing the 
-
 # Get started
     cd proxy
     node proxy.js
@@ -47,6 +46,10 @@ Add your EVRYTHNG API key and the id of the Thng you want to include in your mas
 Browse to: 
 
     http://localhost:8001/wot-a-mashup.html 
+    
+# Writing your own module
+
+You can create you own mashup modules (little boxes) by 
 
 The two EVRYTHNG modules are the last ones on the Clickscript IDE module bar! Enjoy!
 

@@ -31,11 +31,13 @@ mashups/applications within seconds!
     cd proxy
     sudo npm install
 
-## Configure your EVRYTHNG API key in
+## Configure your EVRYTHNG API key
+
+In
 
     cs/system/ConfigController.js
 
-Add your EVRYTHNG API key and the id of the Thng you want to include in your mashups:
+add your EVRYTHNG API key and the id of the Thng you want to include in your mashups:
 
     evrythng : {key : "YOUR-KEY", thng : "YOUR-THNG-ID", proxyUrl : "http://localhost:8001"}
 

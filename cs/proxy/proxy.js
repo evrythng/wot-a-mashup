@@ -31,4 +31,4 @@ httpProxy.createServer(function (req, res, proxy) {
 		});
 	}
 }).listen(8001);
-console.log("EVRYTHNG Clickscript proxy started on port " + port);
+console.log("EVRYTHNG Clickscript proxy started on http://localhost:" + port + "/wot-a-mashup.html");

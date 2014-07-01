@@ -33,7 +33,7 @@ cs.componentContainer.push({
 		var compo = this;
 		$.ajax({
 			beforeSend: function(xhrObj){
-				xhrObj.setRequestHeader("Accept","application/javascript");
+				xhrObj.setRequestHeader("Accept","application/json");
 				xhrObj.setRequestHeader("Authorization", cs.config.evrythng.key);
 			},
 			url: endPointUrl,

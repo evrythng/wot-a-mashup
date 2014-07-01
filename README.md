@@ -31,9 +31,9 @@ mashups/applications within seconds!
     cd proxy
     sudo npm install
 
-## Configure your API key (optional)
+## Configure your EVRYTHNG API key in
 
-    pico system/ConfigController.js
+    cs/system/ConfigController.js
 
 Add your EVRYTHNG API key and the id of the Thng you want to include in your mashups:
 
